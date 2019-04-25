@@ -1,0 +1,34 @@
+{
+  "name": "rak3rman-landing",
+  "version": "1.0.0",
+  "description": "rak3rman-landing",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node app.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RAK3RMAN/rak3rman-landing.git"
+  },
+  "author": "RAK3RMAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RAK3RMAN/rak3rman-landing/issues"
+  },
+  "homepage": "https://github.com/RAK3RMAN/rak3rman-landing#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "data-store": "^3.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "http": "0.0.0",
+    "http-errors": "^1.7.2",
+    "ip": "^1.1.5",
+    "morgan": "^1.9.1",
+    "swagger-ui-express": "^4.0.2",
+    "uuid": "^3.3.2"
+  }
+}
