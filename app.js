@@ -74,9 +74,6 @@ app.use('/assets', express.static(process.cwd() + '/assets'));
 
 //Create Routes
 app.get('/', mainRoutes.homeRoute);
-app.get('/assets/css/:file', mainRoutes.cssRoute);
-app.get('/assets/js/:file', mainRoutes.jsRoute);
-app.get('/assets/img/:file', mainRoutes.imgRoute);
 
 //End of Asset Handler Config Routes/Logic - - - - - - - - -
 
