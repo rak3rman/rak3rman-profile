@@ -113,7 +113,7 @@ server.listen(storage.get('console_port'), function () {
     console.log('======================================');
     console.log('   RAK3RMAN LANDING | RAk3rman 2019   ');
     console.log('======================================');
-    console.log('Development Port Accessable at: http://' + ip.address() + ":" + storage.get('console_port'));
+    console.log('Server Accessible at: http://' + ip.address() + ":" + storage.get('console_port'));
     console.log(' ');
 });
 
