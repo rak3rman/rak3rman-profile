@@ -37,12 +37,6 @@ if (console_port === undefined) {
     storage.set('console_port', 3000);
     console.log('Config Manager: Port Set to DEFAULT: 3000');
 }
-//Development Check
-let dev_status = storage.get('dev_status');
-if (dev_status === undefined) {
-    storage.set('dev_status', true);
-    console.log('Config Manager: Dev Status to DEFAULT: true');
-}
 //End of System Config Checks - - - - - - - - - - - - - -
 
 //Declare App
@@ -110,36 +104,16 @@ app.use(function (err, req, res, next) {
 //===================================================//
 //        --- External Connections Setup ---         //
 //===================================================//
-console.log(' ');
-console.log('======================================');
-console.log('   RAK3RMAN LANDING | RAk3rman 2019   ');
-console.log('======================================');
-if (storage.get('dev_status') === false ) {
-    //Setup HTTPS
-    let key = fs.readFileSync('encryption/private.key');
-    let cert = fs.readFileSync( 'encryption/primary.crt' );
-    let ca = fs.readFileSync( 'encryption/intermediate.crt' );
-    let options = {
-        key: key,
-        cert: cert,
-        ca: ca
-    };
-    //Redirect HTTPS
-    let forceSsl = require('express-force-ssl');
-    app.use(forceSsl);
-    //Start HTTPS Connection
-    let https = require('https');
-    let httpsserver = https.createServer(options, app);
-    httpsserver.listen(443, function () {
-        console.log('HTTPS Server Accessable at: https://' + ip.address() + ":443");
-    });
-}
 
-//HTTP Port Listen
+//Port Listen
 let http = require('http');
-let httpserver = http.createServer(app);
-httpserver.listen(storage.get('console_port'), function () {
-    console.log('Development Server Accessable at: http://' + ip.address() + ":" + storage.get('console_port'));
+let server = http.createServer(app);
+server.listen(storage.get('console_port'), function () {
+    console.log(' ');
+    console.log('======================================');
+    console.log('   RAK3RMAN LANDING | RAk3rman 2019   ');
+    console.log('======================================');
+    console.log('Development Port Accessable at: http://' + ip.address() + ":" + storage.get('console_port'));
     console.log(' ');
 });
 
