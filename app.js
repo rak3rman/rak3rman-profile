@@ -75,6 +75,8 @@ app.use('/assets', express.static(process.cwd() + '/assets'));
 
 //Create Routes
 app.get('/', mainRoutes.homeRoute);
+app.get('/about', mainRoutes.aboutRoute);
+app.get('/projects', mainRoutes.projectsRoute);
 
 //End of Asset Handler Config Routes/Logic - - - - - - - - -
 
