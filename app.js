@@ -77,6 +77,7 @@ app.use('/assets', express.static(process.cwd() + '/assets'));
 app.get('/', mainRoutes.homeRoute);
 app.get('/about', mainRoutes.aboutRoute);
 app.get('/projects', mainRoutes.projectsRoute);
+app.get('/contact', mainRoutes.contactRoute);
 
 //End of Asset Handler Config Routes/Logic - - - - - - - - -
 

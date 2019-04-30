@@ -17,3 +17,8 @@ exports.aboutRoute = function (req, res) {
 exports.projectsRoute = function (req, res) {
     res.render('pages/projects.ejs')
 };
+
+//Contact Page Route
+exports.contactRoute = function (req, res) {
+    res.render('pages/contact.ejs')
+};
