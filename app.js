@@ -19,6 +19,7 @@ let ip = require('ip');
 let uuidv4 = require('uuid/v4');
 let fs = require('fs');
 let cmd = require('node-cmd');
+let crypto = require('crypto');
 
 //Setup Local Database
 let dataStore = require('data-store');
@@ -93,7 +94,10 @@ app.get('/about', mainRoutes.aboutRoute);
 app.get('/projects', mainRoutes.projectsRoute);
 app.get('/contact', mainRoutes.contactRoute);
 app.post('/api/webpage/update', function (req, res) {
-    if (storage.get('webhook_secret') === req.body["secret"] && storage.get('production') === true) {
+    let hmac = crypto.createHmac('sha1', storage.get('webhook_secret'));
+    hmac.update(JSON.stringify(req.body));
+    let calculatedSignature = 'sha1=' + hmac.digest('hex');
+    if (req.headers['x-hub-signature'] === calculatedSignature && storage.get('production') === true) {
         console.log("Webhook Handler | Update Request Received");
         cmd.get(
             "pm2 restart rak3rman-profile",
