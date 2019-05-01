@@ -100,7 +100,7 @@ app.post('/api/webpage/update', function (req, res) {
     if (req.headers['x-hub-signature'] === calculatedSignature && storage.get('production') === true) {
         console.log("Webhook Handler | Update Request Received");
         cmd.get(
-            "pm2 restart rak3rman-profile",
+            "cd rak3rman-profile; git pull; pm2 restart rak3rman-profile",
             function(err, data, stderr){
                 console.log("Webhook Handler | Restart in Progress: " + data);
                 console.log("Webhook Handler | ERROR: " + err);
@@ -110,7 +110,7 @@ app.post('/api/webpage/update', function (req, res) {
             message: 'Received'
         });
     } else {
-        console.log("Webhook Handler | Invalid Token or Not in Production | Token: " + req.body["secret"]);
+        console.log("Webhook Handler | Invalid Token or Not in Production Mode");
         res.json({
             message: 'Invalid Request'
         });
