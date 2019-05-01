@@ -150,7 +150,7 @@
                     '        <div class="col-md-3 text-white mb-3 mb-md-0"><a href=' + data[i]["html_url"] + '><span class="h4">' + data[i]["name"] + '</span></a></div>\n' +
                     '        <div class="col-md-9">\n' +
                     '            <h5 class="text-white">' + data[i]["description"] + '</h5>\n' +
-                    '            <span>Last updated ' + moment(data[i]["pushed_at"]).fromNow() + '</span>\n' +
+                    '            <span><img class="pr-2" src="https://img.shields.io/badge/language-' + data[i]["language"] + '-informational.svg?style=flat" alt="stat1"><img src="https://travis-ci.org/RAK3RMAN/' + data[i]["name"] + '.svg?branch=master" alt="stat2"> | Last updated ' + moment(data[i]["pushed_at"]).fromNow() + '</span>\n' +
                     '        </div>\n' +
                     '    </div>\n' +
                     '</div>'
