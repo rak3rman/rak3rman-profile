@@ -1,5 +1,5 @@
 /*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-App/Filename : rak3rman-landing/config/exitOpt.js
+App/Filename : rak3rman-profile/config/exitOpt.js
 Author       : RAk3rman
 \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 

@@ -1,5 +1,5 @@
 /*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-App/Filename : rak3rman-landing/app.js
+App/Filename : rak3rman-profile/app.js
 Description  : Initializes nodejs
 Author       : RAk3rman
 \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
@@ -114,7 +114,7 @@ let server = http.createServer(app);
 server.listen(storage.get('console_port'), function () {
     console.log(' ');
     console.log('======================================');
-    console.log('   RAK3RMAN LANDING | RAk3rman 2019   ');
+    console.log('   RAK3RMAN PROFILE | RAk3rman 2019   ');
     console.log('======================================');
     console.log('Server Accessible at: http://' + ip.address() + ":" + storage.get('console_port'));
     console.log(' ');

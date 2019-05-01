@@ -1,7 +1,7 @@
 {
-  "name": "rak3rman-landing",
+  "name": "rak3rman-profile",
   "version": "1.0.0",
-  "description": "rak3rman-landing",
+  "description": "rak3rman-profile",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RAK3RMAN/rak3rman-landing.git"
+    "url": "git+https://github.com/RAK3RMAN/rak3rman-profile.git"
   },
   "author": "RAK3RMAN",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RAK3RMAN/rak3rman-landing/issues"
+    "url": "https://github.com/RAK3RMAN/rak3rman-profile/issues"
   },
-  "homepage": "https://github.com/RAK3RMAN/rak3rman-landing#readme",
+  "homepage": "https://github.com/RAK3RMAN/rak3rman-profile#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
