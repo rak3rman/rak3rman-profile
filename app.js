@@ -18,6 +18,7 @@ let bodyParser = require('body-parser');
 let ip = require('ip');
 let uuidv4 = require('uuid/v4');
 let fs = require('fs');
+let cmd = require('node-cmd');
 
 //Setup Local Database
 let dataStore = require('data-store');
@@ -36,6 +37,19 @@ let console_port = storage.get('console_port');
 if (console_port === undefined) {
     storage.set('console_port', 3000);
     console.log('Config Manager: Port Set to DEFAULT: 3000');
+}
+//Webhook Secret Check
+let webhook_secret = storage.get('webhook_secret');
+if (webhook_secret === undefined) {
+    let newSecret = uuidv4();
+    storage.set('webhook_secret', newSecret);
+    console.log('Config Manager: Webhook Secret Set to DEFAULT: ' + newSecret);
+}
+//Production Check
+let production = storage.get('production');
+if (production === undefined) {
+    storage.set('production', false);
+    console.log('Config Manager: Production to DEFAULT: false');
 }
 //End of System Config Checks - - - - - - - - - - - - - -
 
@@ -78,6 +92,26 @@ app.get('/', mainRoutes.homeRoute);
 app.get('/about', mainRoutes.aboutRoute);
 app.get('/projects', mainRoutes.projectsRoute);
 app.get('/contact', mainRoutes.contactRoute);
+app.post('/api/webpage/update', function (req, res) {
+    if (storage.get('webhook_secret') === req.body["secret"] && storage.get('production') === true) {
+        console.log("Webhook Handler | Update Request Received");
+        cmd.get(
+            "pm2 restart rak3rman-profile",
+            function(err, data, stderr){
+                console.log("Webhook Handler | Restart in Progress: " + data);
+                console.log("Webhook Handler | ERROR: " + err);
+            }
+        );
+        res.json({
+            message: 'Received'
+        });
+    } else {
+        console.log("Webhook Handler | Invalid Token or Not in Production: " + req.body);
+        res.json({
+            message: 'Invalid Request'
+        });
+    }
+});
 
 //End of Asset Handler Config Routes/Logic - - - - - - - - -
 
