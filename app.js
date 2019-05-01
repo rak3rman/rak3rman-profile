@@ -106,7 +106,7 @@ app.post('/api/webpage/update', function (req, res) {
             message: 'Received'
         });
     } else {
-        console.log("Webhook Handler | Invalid Token or Not in Production: " + req.body);
+        console.log("Webhook Handler | Invalid Token or Not in Production | Token: " + req.body["secret"]);
         res.json({
             message: 'Invalid Request'
         });
