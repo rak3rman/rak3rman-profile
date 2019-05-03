@@ -17,7 +17,6 @@ let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let ip = require('ip');
 let uuidv4 = require('uuid/v4');
-let fs = require('fs');
 let cmd = require('node-cmd');
 let crypto = require('crypto');
 
@@ -100,7 +99,7 @@ app.post('/api/webpage/update', function (req, res) {
     if (req.headers['x-hub-signature'] === calculatedSignature && storage.get('production') === true) {
         console.log("Webhook Handler | Update Request Received");
         cmd.get(
-            "cd rak3rman-profile; git pull; pm2 restart rak3rman-profile",
+            "cd rak3rman-profile; git pull; npm install; pm2 restart rak3rman-profile",
             function(err, data, stderr){
                 console.log("Webhook Handler | Restart in Progress: " + data);
                 console.log("Webhook Handler | ERROR: " + err);
