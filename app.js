@@ -51,6 +51,12 @@ if (production === undefined) {
     storage.set('production', false);
     console.log('Config Manager: Production to DEFAULT: false');
 }
+//Construction Check
+let construction = storage.get('construction');
+if (construction === undefined) {
+    storage.set('construction', true);
+    console.log('Config Manager: Construction to DEFAULT: true');
+}
 //End of System Config Checks - - - - - - - - - - - - - -
 
 //Declare App
@@ -88,7 +94,11 @@ app.use('/assets', express.static(process.cwd() + '/assets'));
 //===================================================//
 
 //Create Routes
-app.get('/', mainRoutes.homeRoute);
+if (storage.get('construction') === true) {
+    app.get('/', mainRoutes.constructionRoute);
+} else {
+    app.get('/', mainRoutes.homeRoute);
+}
 app.post('/api/webpage/update', function (req, res) {
     let hmac = crypto.createHmac('sha1', storage.get('webhook_secret'));
     hmac.update(JSON.stringify(req.body));
