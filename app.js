@@ -89,9 +89,6 @@ app.use('/assets', express.static(process.cwd() + '/assets'));
 
 //Create Routes
 app.get('/', mainRoutes.homeRoute);
-app.get('/about', mainRoutes.aboutRoute);
-app.get('/projects', mainRoutes.projectsRoute);
-app.get('/contact', mainRoutes.contactRoute);
 app.post('/api/webpage/update', function (req, res) {
     let hmac = crypto.createHmac('sha1', storage.get('webhook_secret'));
     hmac.update(JSON.stringify(req.body));

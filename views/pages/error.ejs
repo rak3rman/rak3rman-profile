@@ -1,71 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>RAk3rman | Error</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="/assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="/assets/css/aos.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="text" content="">
+    <meta name="author" content="">
+    <title>RAk3rman | Under Construction</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/revolution-addons/filmstrip/css/revolution.addon.filmstrip.css">
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/revolution-addons/typewriter/css/typewriter.css">
+    <link rel="stylesheet" type="text/css" href="/assets/type/icons.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/color/blue.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i' rel='stylesheet' type='text/css'>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
 </head>
 <body>
-<div class="site-wrap">
-    <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-                <span class="icon-close2 js-menu-toggle"></span>
+<div class="content-wrapper">
+    <div class="d-flex align-items-start flex-column h-100vh inverse-text text-center">
+        <div class="mb-auto ml-auto mr-auto">
+            <div class="container inner pt-50 pb-30">
+                <div class="logo"> <a href="/"><img src="/assets/images/logo-white.png" width="150" alt="" /></a> </div>
             </div>
         </div>
-        <div class="site-mobile-menu-body"></div>
+        <!-- /div -->
+        <div class="ml-auto mr-auto">
+            <div class="h-100 d-flex flex-column justify-content-center inverse-text p-90 p-sm-0 text-center">
+                <h1 class="heading text-center"><i class="fas fa-exclamation-triangle"></i> <%= error.statusCode %> Error</h1>
+                <h2 class="sub-heading2"><%= error.message %></h2>
+                <div class="space10"></div>
+                <div class="d-inline-block"><a href="/"  class="btn btn-rounded btn-white btn-icon btn-icon-left"><i class="fas fa-home"></i>Return Home</a></div>
+            </div>
+        </div>
+        <!-- /div -->
+        <div class="mt-auto ml-auto mr-auto w-100">
+            <div class="container inner pt-30 pb-40">
+                <div class="space10"></div>
+                <p>© 2019 Radison Akerman. All rights reserved.</p>
+                <ul class="social social-mute social-s">
+                    <!--                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>-->
+                    <!--                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>-->
+                </ul>
+                <!-- /.social -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /div -->
     </div>
-    <header class="site-navbar py-3" role="banner">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-11 col-xl-2">
-                    <img src="/assets/images/logo-white.png" style="height: 100px" alt="logo">
-                </div>
-                <div class="col-12 col-md-10 d-none d-xl-block">
-                    <nav class="site-navigation position-relative text-right" role="navigation">
-                        <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                            <li class="active"><a href="/">Error</a></li>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/projects">Projects</a></li>
-                            <!--<li><a href="https://market.rak3rman.com">Market</a></li>-->
-                            <li><a href="/contact">Contact</a></li>
-                            <li class="cta"><a href="https://beta.rak3rman.com">Login</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-            </div>
-        </div>
-    </header>
+    <!-- /div -->
 </div>
-<div class="site-section site-hero">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-10">
-                <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200"><%= error.statusCode %> Error</h1>
-                <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300"><%= error.message %></span>
-                <a href="/" class="btn-custom" data-aos="fade-up" data-aos-delay="400"><span>Return Home</span></a>
-            </div>
-        </div>
-    </div>
-</div>
-<% include ../partials/footer.ejs %>
+<!-- /.content-wrapper -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/assets/revolution/revolution-addons/filmstrip/js/revolution.addon.filmstrip.min.js"></script>
+<script src="/assets/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems! The following part can be removed on Server for On Demand Loading) -->
+<!--<script src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>-->
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/scripts.js"></script>
+<script>
+    $.backstretch([
+        "/assets/images/photos/img1.jpeg"
+        , "/assets/images/photos/img2.jpeg"
+        , "/assets/images/photos/img3.jpeg"
+        , "/assets/images/photos/img4.jpeg"
+    ], {duration: 10000, fade: 1000});
+</script>
 </body>
 </html>
