@@ -98,6 +98,7 @@ if (storage.get('construction') === true) {
     app.get('/', mainRoutes.constructionRoute);
 } else {
     app.get('/', mainRoutes.homeRoute);
+    app.get('/contact', mainRoutes.redirRoute);
 }
 app.post('/api/webpage/update', function (req, res) {
     let hmac = crypto.createHmac('sha1', storage.get('webhook_secret'));

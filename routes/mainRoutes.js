@@ -8,6 +8,12 @@ exports.homeRoute = function (req, res) {
     res.render('pages/home.ejs')
 };
 
+//Redirect Page Route
+exports.redirRoute = function (req, res) {
+    res.redirect('/');
+};
+
+
 //Construction Page Route
 exports.constructionRoute = function (req, res) {
     res.render('pages/construction.ejs')
