@@ -6,5 +6,3 @@
 node_modules/
 
 config/sysConfig\.json
-
-package-lock.json
