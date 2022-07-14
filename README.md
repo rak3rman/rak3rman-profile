@@ -1,7 +1,16 @@
-# RAk3rman Profile
-[![Build Status](https://travis-ci.org/RAK3RMAN/rak3rman-profile.svg?branch=master)](https://travis-ci.org/RAK3RMAN/rak3rman-profile)
+# Mark 1
 
-The public webpage profile for Radison Akerman
+The 1st iteration of Radison Akerman's personal website, built on Node.js and bare HTML/CSS
+
+## Site Screenshots
+
+Apologies, there seems to be an screenshot issue with the color gradient clipping on title sections. 
+
+[Home Page](https://github.com/rak3rman/mark1/files/9107075/RAk3rman.Home.pdf)
+
+[About Page](https://github.com/rak3rman/mark1/files/9107105/RAk3rman.About.pdf)
+
+[Projects Page](https://github.com/rak3rman/mark1/files/9107160/RAk3rman.Projects.pdf)
 
 ## Install and Setup
 - Clone the repository from github.com
