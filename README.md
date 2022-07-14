@@ -6,11 +6,11 @@ The 1st iteration of Radison Akerman's personal website, built on Node.js and ba
 
 Apologies, there seems to be an screenshot issue with the color gradient clipping on title sections. 
 
-[Home Page](https://github.com/rak3rman/mark1/files/9107075/RAk3rman.Home.pdf)
+[Home Page PDF](https://github.com/rak3rman/mark1/files/9107228/mark1home.pdf)
 
-[About Page](https://github.com/rak3rman/mark1/files/9107105/RAk3rman.About.pdf)
+[About Page PDF](https://github.com/rak3rman/mark1/files/9107229/mark1about.pdf)
 
-[Projects Page](https://github.com/rak3rman/mark1/files/9107160/RAk3rman.Projects.pdf)
+[Projects Page PDF](https://github.com/rak3rman/mark1/files/9107227/mark1projects.pdf)
 
 ## Install and Setup
 - Clone the repository from github.com
