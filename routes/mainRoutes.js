@@ -8,17 +8,13 @@ exports.homeRoute = function (req, res) {
     res.render('pages/home.ejs')
 };
 
-//About Page Route
-exports.aboutRoute = function (req, res) {
-    res.render('pages/about.ejs')
+//Redirect Page Route
+exports.redirRoute = function (req, res) {
+    res.redirect('/');
 };
 
-//Projects Page Route
-exports.projectsRoute = function (req, res) {
-    res.render('pages/projects.ejs')
-};
 
-//Contact Page Route
-exports.contactRoute = function (req, res) {
-    res.render('pages/contact.ejs')
+//Construction Page Route
+exports.constructionRoute = function (req, res) {
+    res.render('pages/construction.ejs')
 };
